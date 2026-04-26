@@ -1,5 +1,4 @@
-const API_BASE = 'http://localhost:3000/api';
-
+const API_BASE = 'https://manju-company.onrender.com/api';
 // ── SMOOTH SCROLL ──
 function goToSection(sectionId) {
   const target = document.getElementById(sectionId);

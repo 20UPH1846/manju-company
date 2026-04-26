@@ -12,8 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors({ origin: '*' }));
 app.use(express.json());
-app.use(express.static('public'));
-
+app.use(express.static(__dirname));
 const USERS_FILE = path.join(__dirname, 'users.json');
 
 function loadUsers() {

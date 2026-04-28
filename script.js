@@ -1,4 +1,5 @@
 const API_BASE = 'https://manju-company.onrender.com/api';
+
 // ── SMOOTH SCROLL ──
 function goToSection(sectionId) {
   const target = document.getElementById(sectionId);
@@ -11,14 +12,36 @@ window.addEventListener('scroll', function () {
   nav.style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.3)' : 'none';
 });
 
+// ── MOBILE NAV ──
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
+
+document.addEventListener('click', function (e) {
+  const nav = document.getElementById('mobileNav');
+  const hamburger = document.getElementById('hamburger');
+  if (nav && hamburger && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+    nav.classList.remove('open');
+  }
+});
+
 // ── MODAL FUNCTIONS ──
-function openModal() {
+function openLoginModal() {
   document.getElementById('loginModal').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 
+function openRegisterModal() {
+  document.getElementById('registerModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
 function closeModal(id) {
-  document.getElementById(id || 'loginModal').classList.remove('active');
+  document.getElementById(id).classList.remove('active');
   document.body.style.overflow = '';
 }
 

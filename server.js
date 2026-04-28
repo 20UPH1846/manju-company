@@ -169,20 +169,3 @@ app.get('/api/me', (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Manju Groups API running on http://localhost:${PORT}`);
 });
-// ── MOBILE NAV ──
-function toggleMobileNav() {
-  document.getElementById('mobileNav').classList.toggle('open');
-}
-
-function closeMobileNav() {
-  document.getElementById('mobileNav').classList.remove('open');
-}
-
-// Close mobile nav when clicking outside
-document.addEventListener('click', function(e) {
-  const nav = document.getElementById('mobileNav');
-  const hamburger = document.getElementById('hamburger');
-  if (nav && hamburger && !nav.contains(e.target) && !hamburger.contains(e.target)) {
-    nav.classList.remove('open');
-  }
-});

@@ -769,11 +769,7 @@ footer p { color: rgba(255,255,255,0.4); font-size: 14px; }
 .projects .section-title { color: white; }
 .projects .section-sub { color: rgba(255,255,255,0.55); margin-bottom: 60px; }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-}
+
 
 .project-card {
   background: rgba(255,255,255,0.04);
